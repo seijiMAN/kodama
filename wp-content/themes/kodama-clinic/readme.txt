@@ -1,71 +1,31 @@
-=== kodama-clinic ===
+=== Twenty Nineteen ===
 Contributors: wordpressdotorg
-Requires at least: 5.9
-Tested up to: 6.6
-Requires PHP: 5.6
-Stable tag: 1.8
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-patterns
+Requires at least: 4.9.6
+Tested up to: 5.8
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+Our 2019 default theme is designed to show off the power of the block editor.
+
 == Description ==
+Our 2019 default theme is designed to show off the power of the block editor. It features custom styles for all the default blocks, and is built so that what you see in the editor looks like what you'll see on your website. Twenty Nineteen is designed to be adaptable to a wide range of websites, whether you’re running a photo blog, launching a new business, or supporting a non-profit. Featuring ample whitespace and modern sans-serif headlines paired with classic serif body text, it's built to be beautiful on all screen sizes.
 
-Built on a solidly designed foundation, kodama-clinic embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its color palette is drawn from nature, and its layout elements sit gently on the page.
+For more information about Twenty Nineteen please go to https://wordpress.org/support/article/twenty-nineteen/.
 
-The true richness of kodama-clinic lies in its opportunity for customization. The theme is built to take advantage of the Site Editor features introduced in WordPress 5.9, which means that colors, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks.
+== Installation ==
 
-Whether you’re building a single-page website, a blog, a business website, or a portfolio, kodama-clinic will help you create a site that is uniquely yours.
-
-== Changelog ==
-
-= 1.8 =
-* Released: July 16, 2024
-
-https://wordpress.org/documentation/article/twenty-twenty-two-changelog/#Version_1.8
-
-= 1.7 =
-* Released: April 2, 2024
-
-https://wordpress.org/documentation/article/twenty-twenty-two-changelog/#Version_1.7
-
-= 1.6 =
-* Released: November 7, 2023
-
-https://wordpress.org/documentation/article/twenty-twenty-two-changelog/#Version_1.6
-
-= 1.5 =
-* Released: August 8, 2023
-
-https://wordpress.org/documentation/article/twenty-twenty-two-changelog/#Version_1.5
-
-= 1.4 =
-* Released: March 28, 2023
-
-https://wordpress.org/documentation/article/twenty-twenty-two-changelog/#Version_1.4
-
-= 1.3 =
-* Released: November 1, 2022
-
-https://wordpress.org/documentation/article/twenty-twenty-two-changelog/#Version_1.3
-
-= 1.2 =
-* Released: May 24, 2022
-
-https://wordpress.org/documentation/article/twenty-twenty-two-changelog/#Version_1.2
-
-= 1.1 =
-* Released: February 22, 2022
-
-https://wordpress.org/documentation/article/twenty-twenty-two-changelog/#Version_1.1
-
-= 1.0 =
-* Released: January 25, 2022
-
-https://wordpress.org/documentation/article/twenty-twenty-two-changelog/#Version_1.0
+1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
+2. Type in Twenty Nineteen in the search form and press the 'Enter' key on your keyboard.
+3. Click on the 'Activate' button to use your new theme right away.
+4. Go to https://wordpress.org/support/article/twenty-nineteen/ for a guide on how to customize this theme.
+5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Copyright ==
 
-kodama-clinic WordPress Theme, 2021-2024 WordPress.org
-kodama-clinic is distributed under the terms of the GNU GPL.
+Twenty Nineteen WordPress Theme, Copyright 2018-2021 WordPress.org
+Twenty Nineteen is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -77,50 +37,73 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-This theme bundles the following third-party resources:
+== Changelog ==
 
-DM Sans Font
-Copyright 2014-2017 Indian Type Foundry (info@indiantypefoundry.com)
-Copyright 2019 Google LLC
-Copyright 2014-2018 Adobe (http://www.adobe.com/)
-License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
-Source: https://github.com/googlefonts/dm-fonts
+= 2.1 =
+* Released: July 20, 2021
 
-IBM Plex Font
-Copyright 2017 IBM Corp.
-License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
-Source: https://github.com/IBM/plex
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_2.1
 
-Inter Font
-Copyright (c) 2016-2020 The Inter Project Authors.
-License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
-Source: https://github.com/rsms/inter
+= 2.0 =
+* Released: March 9, 2021
 
-Source Serif Font
-Copyright 2014-2021 Adobe (http://www.adobe.com/)
-License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
-Source: https://github.com/adobe-fonts/source-serif
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_2.0
 
-Block Pattern Images:
+= 1.9 =
+* Released: December 22, 2020
 
-"White Bellied Flycatcher" illustrated by Elizabeth Gould. Public Domain.
-https://www.rawpixel.com/image/321474/free-illustration-image-bird-vintage-birds
-Includes modified versions created specifically for kodama-clinic.
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.9
 
-Colorful vintage hummingbird illustrations. CC0.
-https://www.rawpixel.com/image/2281674/free-illustration-image-bird-hummingbird-flying
-https://www.rawpixel.com/image/2281671/free-illustration-image-bird-hummingbird-flying
-https://www.rawpixel.com/image/2281679/free-illustration-image-bird-hummingbird-animals
-https://www.rawpixel.com/image/2281665/free-illustration-image-hummingbird-ernst-haeckel-birds
+= 1.8 =
+* Released: December 8, 2020
 
-"Green-tailed Jacamar" by Jacques Barraband. CC0.
-https://www.rawpixel.com/image/328508/free-illustration-image-jacques-barraband-paradise
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.8
 
-"Ducks" by Goyō Hashiguchi. CC0
-https://www.rawpixel.com/image/3813787/illustration-image-flower-art-floral
+= 1.7 =
+* Released: August 11, 2020
 
-"Colombes et lis, étoffe imprimée" illustrated by Maurice Pillard Verneuil.
-https://www.rawpixel.com/image/2053817/illustration-from-lanimal-dans-decoration
-Included as a short video clip.
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.7
 
-Modified versions of the above images, as well as additional "flight path" illustrations were created specifically for kodama-clinic. CC0.
+= 1.6 =
+* Released: June 10, 2020
+
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.6
+
+= 1.5 =
+* Released: March 31, 2020
+
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.5
+
+= 1.4 =
+* Released: May 7, 2019
+
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.4
+
+= 1.3 =
+* Released: February 21, 2019
+
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.3
+
+= 1.2 =
+* Released: January 9, 2019
+
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.2
+
+= 1.1 =
+* Released: December 19, 2018
+
+https://codex.wordpress.org/Twenty_Nineteen_Theme_Changelog#Version_1.1
+
+= 1.0 =
+* Released: December 6, 2018
+
+Initial release
+
+== Resources ==
+* normalize.css, © 2012-2018 Nicolas Gallagher and Jonathan Neal, MIT
+* Underscores, © 2012-2021 Automattic, Inc., GNU GPL v2 or later
+* Bundled block pattern images:
+	* Abstract Background by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-background-0SRRVNMKBX
+	* Abstract Waves by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-waves-0KREGLTZQ3
+	* Abstract Bokeh by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-bokeh-P4KVZBMQ6L
+	* Colorful Bokeh by HD Wallpapers, CC0. https://stocksnap.io/photo/colorful-bokeh-VN4G84GL8H

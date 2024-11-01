@@ -20,7 +20,7 @@
 
 // ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
-define( 'DB_NAME', 'vps_kodama_clinic_dev' );
+define( 'DB_NAME', 'vps_kodama_clinic' );
 
 /** MySQL データベースのユーザー名 */
 define( 'DB_USER', 'exuser' );

@@ -1,12 +1,12 @@
 <?php
 /**
- * Twenty Twenty-Two functions and definitions
+ * kodama-clinic functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
  * @subpackage Twenty_Twenty_Two
- * @since Twenty Twenty-Two 1.0
+ * @since kodama-clinic 1.0
  */
 
 
@@ -15,7 +15,7 @@ if ( ! function_exists( 'twentytwentytwo_support' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since kodama-clinic 1.0
 	 *
 	 * @return void
 	 */
@@ -37,7 +37,7 @@ if ( ! function_exists( 'twentytwentytwo_styles' ) ) :
 	/**
 	 * Enqueue styles.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since kodama-clinic 1.0
 	 *
 	 * @return void
 	 */

@@ -1,0 +1,815 @@
+@import "mixin";
+
+#wpadminbar {
+  position: fixed !important;
+  top: initial;
+  bottom: 0;
+}
+
+:root {
+  --primary-color: #2fd453;
+  --primary-color2: #15ba6f;
+  --color3: #15ba6f30;
+  --black: #101010;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+p,
+a,
+h1,
+h2,
+h3,
+date,
+li,
+dd,
+dt,
+input,
+::placeholder {
+  font-family: "秀英丸ゴシック L", "TBちび丸ゴシックPlusK R", Meiryo, sans-serif;
+  font-size: clamp(15px, 2vw, 18px);
+  text-decoration: none !important;
+  &.b {
+    font-family: "TB丸ゴシック DB", "秀英丸ゴシック L",
+      "TBちび丸ゴシックPlusK R", Meiryo, sans-serif;
+  }
+}
+h2 {
+  font-family: "TB丸ゴシック DB", "秀英丸ゴシック L", "TBちび丸ゴシックPlusK R",
+    Meiryo, sans-serif;
+}
+p {
+  line-height: 2.25;
+}
+
+body {
+  background-color: #fffcf6;
+}
+
+ul.genre {
+  font-size: 13px;
+  width: 12.5em;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2px;
+  li {
+    font-size: 12px;
+    border: 2px solid var(--primary-color2);
+    border-radius: 3px;
+    color: var(--primary-color2);
+    font-weight: bold;
+    padding: 0.25em;
+    font-family: "じゅん 34";
+    text-align: center;
+  }
+}
+
+header {
+  // 右上
+  ul.hd-menu {
+    display: grid;
+    grid-template-columns: 20em 10em 10em;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-left: auto;
+    column-gap: 0.25em;
+    row-gap: 0.25em;
+    margin-left: auto;
+    margin-bottom: 5vh;
+    a {
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        background-color: var(--primary-color);
+        border-radius: 0 0 10px 10px;
+        p,
+        i {
+          color: #fff;
+        }
+      }
+    }
+    a.tel {
+      li {
+        background-color: initial;
+        p,
+        i {
+          color: var(--primary-color2);
+          font-size: clamp(20px, 2vw, 30px);
+          letter-spacing: 3px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+  // グローバルメニュー
+  .gmenu {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    row-gap: 20px;
+    // @include mq() {
+    //   display: none;
+    // }
+    .pc-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h1 {
+        text-align: center;
+        img {
+          width: 95%;
+          max-width: 500px;
+        }
+      }
+      .genre {
+        @include mq() {
+          display: none;
+        }
+      }
+    }
+    ul.g-menu {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      li {
+        font-family: "TB丸ゴシック DB", "秀英丸ゴシック L",
+          "TBちび丸ゴシックPlusK R", Meiryo, sans-serif;
+      }
+    }
+  }
+}
+
+@include mq() {
+  header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: #ffffff50;
+    backdrop-filter: blur(22px);
+    @include mq() {
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px); // For Safari and iOS
+    }
+    // トップアイコン
+    ul.hd-menu {
+      display: none;
+    }
+    // グローバルメニュー
+    .gmenu {
+      box-sizing: border-box;
+      h1 {
+        width: 80%;
+        margin: 0 auto;
+      }
+      ul.g-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5em;
+        a {
+          width: 100%;
+          padding: 0 2em;
+          li {
+            font-size: 1.35em;
+            font-weight: 600;
+            text-align: center;
+            background-color: #ffffffcc;
+            padding: 1em 0;
+            border: 1px solid var(--primary-color2);
+            border-radius: 5px;
+            color: var(--primary-color2);
+            @include mq() {
+              box-shadow: 0 0 14px #00000010;
+            }
+          }
+        }
+      }
+    }
+    //
+    &.smh-view {
+      opacity: 0;
+      z-index: -1;
+      &.on {
+        z-index: 999;
+        opacity: 1;
+        transition-duration: 0.5s;
+      }
+    }
+  }
+}
+
+.inner {
+  width: 100%;
+  max-width: 900px;
+  padding: 0 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.smh {
+  display: none;
+  @include mq() {
+    display: flex;
+  }
+}
+
+// スマホ用
+@include mq() {
+  .menu-btn {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: initial;
+    font-size: 25px;
+    i {
+      color: var(--primary-color2);
+    }
+  }
+  // クローズ時
+  .open {
+    i.open-btn {
+      display: block;
+    }
+    i.close-btn {
+      display: none;
+    }
+  }
+  // オープン時
+  .close {
+    i.open-btn {
+      display: none;
+    }
+    i.close-btn {
+      display: block;
+    }
+  }
+}
+.smh-logo {
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 5vh auto 0 auto;
+  h1 {
+    text-align: center;
+    img {
+      width: 95%;
+      max-width: 500px;
+    }
+  }
+  .genre {
+    width: auto;
+    margin: auto auto 0.75em auto;
+    grid-template-columns: auto auto auto auto;
+    gap: 5px;
+    li {
+      white-space: nowrap;
+      font-size: 10px;
+      padding: 0.25em 0.5em;
+      border-width: 1px;
+    }
+  }
+}
+ul.g-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+main.top {
+  padding-top: 5vh;
+  // スライド
+  ul.slide {
+    li {
+      width: 95%;
+      text-align: center;
+      border-radius: 40px;
+      overflow: hidden;
+      max-width: 750px;
+      margin: 0 auto;
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 62.5%;
+      }
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        height: 100%;
+        width: auto;
+      }
+    }
+    @include mq() {
+    }
+  }
+
+  // アーカイブ
+  ul.archive {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-top: 4em;
+    a {
+      border-top: 1px solid var(--black);
+      &:last-child {
+        border-bottom: 1px solid var(--black);
+      }
+      li {
+        display: grid;
+        grid-template-columns: 10em auto 1em;
+        padding: 1.25em 0.5em;
+        box-sizing: border-box;
+        width: 100%;
+        @include mq() {
+          grid-template-columns: 6em auto 1em;
+        }
+        date,
+        h3 {
+          font-size: clamp(13px, 2vw, 14px);
+        }
+        i {
+          font-size: clamp(20px, 2vw, 20px);
+        }
+      }
+    }
+  }
+
+  // 流れる画像
+  .flow-image {
+    width: 100%;
+    margin-top: 8vh;
+    li {
+      overflow: hidden;
+      border-radius: 20px;
+      position: relative;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: auto;
+        height: 110%;
+      }
+    }
+  }
+
+  // 診療時間・アクセス
+  .access-wrap {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 1%;
+    row-gap: 10px;
+    align-items: center;
+    h2 {
+      grid-column: 1/3;
+      margin: 5em auto 2em auto;
+    }
+    // ご来院される患者様へ
+    .area1 {
+      background-color: var(--color3);
+      padding: 1em;
+      box-sizing: border-box;
+      h3 {
+        font-size: clamp(13px, 2vw, 15px);
+        margin-bottom: 1em;
+      }
+      p {
+        font-size: clamp(12px, 2vw, 12px);
+      }
+    }
+    // 営業時間
+    .area2 {
+    }
+    //マップ
+    .map {
+      grid-column: 1/3;
+      background-color: #fff;
+      border-radius: 30px;
+      .map-inner {
+        padding: 20px;
+        iframe {
+          width: 100%;
+          border-radius: 25px;
+          height: 200px;
+        }
+        ul {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 1em;
+          @include mq() {
+            flex-wrap: wrap;
+          }
+          li {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 0.5em;
+            @include mq() {
+              width: 100%;
+              display: grid;
+              grid-template-columns: 1em auto;
+              justify-content: flex-start;
+            }
+            p,
+            i {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    @include mq() {
+      grid-template-columns: 100%;
+      h2,
+      .map {
+        grid-column: initial;
+      }
+    }
+  }
+}
+
+.bikow-wrap {
+  p {
+    line-height: 1.75 !important;
+    padding: 5px 5px !important;
+    font-size: 0.7em !important;
+    border-radius: 7px !important;
+  }
+}
+.timetable {
+  font-size: clamp(13px, 2vw, 17px);
+  ul {
+    display: grid;
+    grid-template-columns: auto 1em 1em 1em 1em 1em 1em 1em;
+    column-gap: 1.5em;
+    padding: 1em 0;
+    border-top: 1px solid #000;
+    &:last-child {
+      border-bottom: 1px solid #000;
+    }
+    li,
+    p,
+    i {
+      font-size: clamp(13px, 2vw, 15px);
+    }
+    span {
+      font-size: clamp(10px, 2vw, 10px);
+    }
+    p,
+    span {
+      white-space: nowrap;
+      line-height: 1;
+    }
+    li {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25em;
+    }
+  }
+}
+
+footer {
+  margin-top: 5em;
+  padding: 50px 20px;
+  background-color: var(--color3);
+  .ft-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    figure {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  @include mq() {
+    .ft-logo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      .genre {
+        width: initial;
+        grid-template-columns: auto auto auto auto;
+        li {
+          padding: 0.25em 0.75em;
+        }
+      }
+    }
+  }
+  .ft-content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+    gap: 2em;
+    .area1 {
+      p {
+        font-size: clamp(15px, 2vw, 15px);
+      }
+      a {
+        display: flex;
+        align-items: center;
+        column-gap: 0.5em;
+        i,
+        p {
+          color: var(--primary-color2);
+          font-size: clamp(20px, 2vw, 20px);
+        }
+      }
+    }
+    .area2 {
+      display: grid;
+      grid-template-columns: 100%;
+      row-gap: 1.5em;
+      align-content: flex-start;
+      a {
+        li {
+          white-space: nowrap;
+          display: flex;
+          align-items: center;
+          column-gap: 0.25em;
+          font-size: clamp(17px, 2vw, 17px);
+          font-weight: bold;
+          color: #057945;
+          font-family: "TB丸ゴシック DB", "秀英丸ゴシック L",
+            "TBちび丸ゴシックPlusK R", Meiryo, sans-serif;
+          &:before {
+            display: block;
+            content: "-";
+          }
+        }
+      }
+    }
+    @include mq() {
+      flex-wrap: wrap;
+      row-gap: 2em;
+      .area1,
+      .area2,
+      .area3 {
+        width: 100%;
+      }
+      .area2 {
+        row-gap: 1em;
+        display: grid;
+        grid-template-columns: 50% 50%;
+      }
+      .area3 {
+        ul {
+          grid-template-columns: minmax(5em, 10em) auto auto auto auto auto auto auto;
+        }
+      }
+    }
+  }
+}
+
+main.post {
+  .ttl {
+    margin-top: 5vh;
+    margin-bottom: 2.5vh;
+    date {
+      font-size: clamp(15px, 3vw, 15px);
+      margin-bottom: 1em;
+    }
+    h2 {
+      margin-top: 0.5em;
+      font-size: clamp(18px, 3vw, 30px);
+    }
+  }
+  .thumbnail {
+    width: 80%;
+    margin: 0 auto 2.5em auto;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    @include mq() {
+      width: 95%;
+      margin: 0 auto 1.5em auto;
+    }
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 62.5%;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+
+main.about {
+  .thumbnail {
+    width: 80%;
+    margin: 2.5em auto 2.5em auto;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    @include mq() {
+      width: 95%;
+      margin: 2.5em auto 1.5em auto;
+    }
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 62.5%;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      width: auto;
+      height: 100%;
+    }
+  }
+  .ttl {
+    margin-top: 5vh;
+    margin-bottom: 2.5vh;
+    date {
+      font-size: clamp(15px, 3vw, 15px);
+      margin-bottom: 1em;
+    }
+    h2 {
+      margin-top: 0.5em;
+      font-size: clamp(18px, 3vw, 30px);
+    }
+  }
+  .name {
+    margin-top: 2.5em;
+    text-align: right;
+  }
+}
+
+main.recruit {
+  .thumbnail {
+    width: 80%;
+    margin: 2.5em auto 2.5em auto;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    @include mq() {
+      width: 95%;
+      margin: 2.5em auto 1.5em auto;
+    }
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 62.5%;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      width: auto;
+      height: 100%;
+    }
+  }
+  .ttl {
+    margin-top: 5vh;
+    margin-bottom: 2.5vh;
+    date {
+      font-size: clamp(15px, 3vw, 15px);
+      margin-bottom: 1em;
+    }
+  }
+  h2,
+  h3 {
+    margin-top: 0.5em;
+    font-size: clamp(18px, 3vw, 30px);
+  }
+  .recruit-top-txt {
+    margin: 3em 0;
+  }
+  .recruit-about {
+    margin-bottom: 5em;
+    dl {
+      display: grid;
+      grid-template-columns: 8em auto;
+      border: 1px solid #00000010;
+      dt,
+      dd {
+        padding: 1.5em 1.5em;
+        border-bottom: 1px solid #eee;
+        font-size: clamp(13px, 2vw, 14px);
+        line-height: 2;
+        @include mq() {
+          padding: 0.75em 0.75em;
+        }
+      }
+      dt {
+        background-color: #15ba6f30;
+        border-color: #ffffff;
+      }
+      dd {
+        background-color: #fff;
+      }
+    }
+  }
+  .recruit-form {
+    width: 90%;
+    margin: 0 auto;
+    dl {
+      display: grid;
+      grid-template-columns: 10em auto;
+      align-items: center;
+      row-gap: 20px;
+      margin-top: 2em;
+      @include mq() {
+        grid-template-columns: 100%;
+      }
+      dt {
+      }
+      dd {
+        background-color: #fff;
+        span {
+          display: block;
+          padding: 0.5em 1.5em;
+          background-color: #fff;
+          border-radius: 999px;
+          overflow: hidden;
+          border: 1px solid #00000020;
+        }
+        input {
+          width: 100%;
+          border: none;
+          font-size: clamp(14px, 2vw, 16px);
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+    .ubmit-btn {
+      width: 100%;
+      background-color: var(--primary-color2);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 0.5em;
+      border-radius: 999px;
+      margin-top: 30px;
+      position: relative;
+      input[type="submit"] {
+        background: initial;
+        border: none;
+        color: #fff;
+        width: 80%;
+        cursor: pointer;
+      }
+      .wpcf7-spinner {
+        position: absolute;
+        top: 50%;
+        right: 1em;
+        translate: 0 -50%;
+      }
+    }
+
+    // エラー時
+    .wpcf7-form-control-wrap {
+      position: relative;
+      .wpcf7-not-valid {
+      }
+      .wpcf7-not-valid + .wpcf7-not-valid-tip {
+        position: absolute;
+        font-size: 12px;
+        top: 50%;
+        right: 1em;
+        translate: 0 -50%;
+        border: none;
+      }
+    }
+    .wpcf7-response-output {
+      font-family: "秀英丸ゴシック L", "TBちび丸ゴシックPlusK R", Meiryo,
+        sans-serif;
+      font-size: clamp(15px, 2vw, 18px);
+      padding: 1em;
+      border-color: var(--primary-color2) !important;
+      color: var(--primary-color2) !important;
+      @include mq() {
+        padding: 0.75em;
+        margin: 2em 0em 1em;
+      }
+    }
+  }
+}

@@ -15,22 +15,22 @@
     </ul>
 
     <!--  アーカイブ -->
-    <ul class="archive inner">
+    <!-- <ul class="archive inner">
         <?php
-        $args = array(
+        /* $args = array(
             'posts_per_page' => 3 // 最新の投稿を3件取得
         );
         $latest_posts = get_posts($args);
-        foreach ($latest_posts as $post) : setup_postdata($post); ?>
-        <a href="<?php the_permalink(); ?>">
+        foreach ($latest_posts as $post) : setup_postdata($post); */ ?>
+        <a href="<?php /* the_permalink(); */?>">
             <li>
-                <date><?php the_time('Y.m.d'); ?></date>
-                <h3><?php the_title(); ?></h3>
+                <date><?php /* the_time('Y.m.d'); */ ?></date>
+                <h3><?php /*the_title(); */ ?></h3>
                 <i class="fa-thin fa-plus"></i>
             </li>
         </a>
-        <?php endforeach; wp_reset_postdata(); ?>
-    </ul>
+        <?php /* endforeach; wp_reset_postdata(); */ ?>
+    </ul> -->
 
 
     <div id="access" class="access-wrap inner">

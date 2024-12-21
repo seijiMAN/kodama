@@ -1,0 +1,4 @@
+
+SCSSコンパイル
+    cd wp-content/themes/kodama-clinic
+    npm run watch

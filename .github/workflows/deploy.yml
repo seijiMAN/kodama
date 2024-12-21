@@ -3,7 +3,7 @@ name: Deploy to VPS
 on:
   push:
     branches:
-      - main # mainブランチにプッシュされた時にデプロイをトリガー
+      - main # mainブランチにプッシュされた時にデプロイをトリガーする
 
 jobs:
   deploy:

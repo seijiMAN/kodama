@@ -2,6 +2,8 @@
 <html lang="ja" <?php language_attributes(); ?>>
 
 <head>
+    <?php wp_head(); ?>
+
 
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon">
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon">
@@ -74,9 +76,6 @@
 
     <meta name="description"
         content="こだまクリニックは、兵庫県洲本市にある内科、呼吸器内科、リウマチ科、アレルギー科を専門とするクリニックです。発熱外来、各種予防接種、健康診断も行っております。院長は高血圧症、脂質異常症、糖尿病などの生活習慣病の治療に力を入れ、関節リウマチや難治性の咳嗽の診療にも注力しています。患者さま一人ひとりに丁寧で親身な医療を提供し、健康で豊かな生活をサポートします。お気軽にご相談ください。">
-
-    <?php wp_head(); ?>
-
 </head>
 
 <body>

@@ -79,7 +79,7 @@
                         <?php endwhile;
                         endif; ?>
                         <li>
-                            <?php 
+                            <?php
                         $week1 = get_sub_field('week1');
                         if ($week1 === '◯') {
                             echo '<i class="fa-regular fa-circle"></i>';
@@ -92,7 +92,7 @@
                             <!-- <i class="fa-regular fa-circle"></i> -->
                         </li>
                         <li>
-                            <?php 
+                            <?php
                         $week2 = get_sub_field('week2');
                         if ($week2 === '◯') {
                             echo '<i class="fa-regular fa-circle"></i>';
@@ -105,7 +105,7 @@
                             <!-- <i class="fa-regular fa-circle"></i> -->
                         </li>
                         <li>
-                            <?php 
+                            <?php
                         $week3 = get_sub_field('week3');
                         if ($week3 === '◯') {
                             echo '<i class="fa-regular fa-circle"></i>';
@@ -118,7 +118,7 @@
                             <!-- <i class="fa-regular fa-circle"></i> -->
                         </li>
                         <li>
-                            <?php 
+                            <?php
                         $week4 = get_sub_field('week4');
                         if ($week4 === '◯') {
                             echo '<i class="fa-regular fa-circle"></i>';
@@ -131,7 +131,7 @@
                             <!-- <i class="fa-regular fa-circle"></i> -->
                         </li>
                         <li>
-                            <?php 
+                            <?php
                         $week5 = get_sub_field('week5');
                         if ($week5 === '◯') {
                             echo '<i class="fa-regular fa-circle"></i>';
@@ -144,7 +144,7 @@
                             <!-- <i class="fa-regular fa-circle"></i> -->
                         </li>
                         <li>
-                            <?php 
+                            <?php
                         $week6 = get_sub_field('week6');
                         if ($week6 === '◯') {
                             echo '<i class="fa-regular fa-circle"></i>';
@@ -157,7 +157,7 @@
                             <!-- <i class="fa-regular fa-circle"></i> -->
                         </li>
                         <li>
-                            <?php 
+                            <?php
                         $week7 = get_sub_field('week7');
                         if ($week7 === '◯') {
                             echo '<i class="fa-regular fa-circle"></i>';
@@ -188,7 +188,7 @@
                         <?php endwhile;
                         endif; ?>
                         <li>
-                            <?php 
+                            <?php
                         $week1 = get_sub_field('week1');
                         if ($week1 === '◯') {
                             echo '<i class="fa-regular fa-circle"></i>';
@@ -201,7 +201,7 @@
                             <!-- <i class="fa-regular fa-circle"></i> -->
                         </li>
                         <li>
-                            <?php 
+                            <?php
                         $week2 = get_sub_field('week2');
                         if ($week2 === '◯') {
                             echo '<i class="fa-regular fa-circle"></i>';
@@ -214,7 +214,7 @@
                             <!-- <i class="fa-regular fa-circle"></i> -->
                         </li>
                         <li>
-                            <?php 
+                            <?php
                         $week3 = get_sub_field('week3');
                         if ($week3 === '◯') {
                             echo '<i class="fa-regular fa-circle"></i>';
@@ -227,7 +227,7 @@
                             <!-- <i class="fa-regular fa-circle"></i> -->
                         </li>
                         <li>
-                            <?php 
+                            <?php
                         $week4 = get_sub_field('week4');
                         if ($week4 === '◯') {
                             echo '<i class="fa-regular fa-circle"></i>';
@@ -240,7 +240,7 @@
                             <!-- <i class="fa-regular fa-circle"></i> -->
                         </li>
                         <li>
-                            <?php 
+                            <?php
                         $week5 = get_sub_field('week5');
                         if ($week5 === '◯') {
                             echo '<i class="fa-regular fa-circle"></i>';
@@ -253,7 +253,7 @@
                             <!-- <i class="fa-regular fa-circle"></i> -->
                         </li>
                         <li>
-                            <?php 
+                            <?php
                         $week6 = get_sub_field('week6');
                         if ($week6 === '◯') {
                             echo '<i class="fa-regular fa-circle"></i>';
@@ -266,7 +266,7 @@
                             <!-- <i class="fa-regular fa-circle"></i> -->
                         </li>
                         <li>
-                            <?php 
+                            <?php
                         $week7 = get_sub_field('week7');
                         if ($week7 === '◯') {
                             echo '<i class="fa-regular fa-circle"></i>';
@@ -326,6 +326,18 @@ $(document).ready(function() {
             .length) {
             $('.menu-btn').removeClass('close').addClass('open');
             $('header.smh-view').removeClass('on');
+        }
+    });
+
+    // ジャンプリンクの場合はメニューを閉じる
+    $(document).on('click', '.g-menu a', function(e) {
+        if ($(this).attr('href').charAt(0) === '#') {
+            if ($('.smh-view').hasClass('on')) {
+                $('.smh-view').removeClass('on');
+            }
+            if ($('.menu-btn').hasClass('close')) {
+                $('.menu-btn').removeClass('close').addClass('open');
+            }
         }
     });
 });
